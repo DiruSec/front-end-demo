@@ -1,0 +1,94 @@
+#slideshow-content{
+    width: 730px;
+    height: 336px;
+    border: #000000 1px solid;
+    overflow: hidden;
+    position: relative;
+}
+
+/* left 需要 position 属性支持 */
+#slideshow-list{
+    position: relative;
+}
+
+#slideshow-nagivation{
+    width: 730px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    z-index: 3;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+#arrow-left{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 37px;
+    height: 63px;
+    background: #00000022 url("../img/arrl.png");
+    transition: background 0.3s;
+    z-index: 3;
+}
+
+#arrow-right{
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 37px;
+    height: 63px;
+    background: #00000022 url("../img/arrr.png");
+    transition: background 0.3s;
+    z-index: 3;
+}
+
+#arrow-left:hover{
+    background: #00000088 url("../img/arrl.png");
+    transition: background 0.3s;
+}
+
+#arrow-right:hover{
+    background: #00000088 url("../img/arrr.png");
+    transition: background 0.3s;
+}
+
+#slideshow-indicator{
+    display: inline;
+    background: #00000022;
+    transition: background 0.3s;
+    border: #000000 0;
+    border-radius: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#slideshow-indicator:hover{
+    background: #00000088;
+    transition: background 0.3s;
+}
+/* transition 懒得写了 */
+
+#slideshow-indicator > a{
+    font-size: 1.5em;
+    color: white;
+    margin: 0 1em 0 0;
+    line-height: .5em;
+}
+
+#slideshow-indicator > a:last-child{
+    margin: 0;
+}
+
+/* 注意 CSS 属性优先级，定义得越详细的属性优先级越高 */
+
+#slideshow-indicator > .index-change:hover{
+    color: cornflowerblue;
+}
+
+#slideshow-indicator > .active, #slideshow-indicator > .active:hover{
+    color: coral;
+}
+
