@@ -387,6 +387,87 @@ a{
   float: left;
   height: 480px;
   margin-right: 10px;
+  position: relative;
+  overflow: hidden;
+
+  .slideshow-btn{
+    position: absolute;
+    z-index: 1;
+    width: 24px;
+    height: 40px;
+    text-align: center;
+    top: 50%;
+    background-color: rgba(#000000,0.2);
+    color: rgba(#ffffff,0.4);
+    border: #000000 none 1px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 20px;
+    padding: 0;
+    margin-top: -20px;
+
+    &:focus{
+    outline: none;
+    }
+
+    &:hover{
+      background-color: rgba(#000000,0.6);
+      transition: background-color 0.2s;
+    }
+  }
+
+  #slideshow-next{
+    right: 0;
+  }
+
+  #slideshow-prev{
+    left: 0;
+  }
+
+  #slideshow-indi{
+    z-index: 1;
+    margin-left: 0!important;
+    left: 46px;
+    bottom: 20px;
+    position: absolute;
+    font-size: 0;
+    text-align: center;
+
+
+    .active{
+      border-radius: 50%;
+      border: 2px none rgba(#FFFFFF,0.4);
+      background-color: rgba(#FFFFFF,0.2);;
+
+      &:after{
+        border: 2px none rgba(#b9beba,.4);
+        background-color: #ffffff;
+      }
+    }
+
+    .slideshow-indicator{
+      width: 18px;
+      height: 18px;
+      position: relative;
+      display: inline-block;
+      margin-right: 1px;
+
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        border: 2px solid rgba(#b9beba,.4)
+      }
+    }
+  }
+  a{
+    transition: all .4s;
+  }
 
   img{
     height: 470px;
@@ -846,6 +927,27 @@ a{
   li{
     display: inline;
     margin: 0 12px 10px 0;
+    position: relative;
+  }
+
+  a{
+    &:after {
+      width: 226px;
+      height: 176px;
+      content: '';
+      background-color: #c81623;
+      position: absolute;
+      z-index: 2;
+      opacity: 0;
+      transition: all 0.4s;
+      left: 0;
+    }
+      &:hover{
+        &:after {
+          opacity: 0.2;
+          transition: all 0.4s;
+        }
+      }
   }
 
   img{
@@ -873,6 +975,27 @@ a{
     margin: 0 10px 8px 0;
     border-radius: 8px;
     overflow: hidden;
+    position: relative;
+  }
+
+  a{
+    &:after {
+      width: 180px;
+      height: 140px;
+      content: '';
+      background-color: #c81623;
+      position: absolute;
+      z-index: 2;
+      opacity: 0;
+      transition: all 0.4s;
+      left: 0;
+    }
+    &:hover{
+      &:after {
+        opacity: 0.2;
+        transition: all 0.4s;
+      }
+    }
   }
 
   img{

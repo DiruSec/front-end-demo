@@ -291,7 +291,66 @@ a {
   width: 590px;
   float: left;
   height: 480px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  position: relative;
+  overflow: hidden; }
+  #slideshow .slideshow-btn {
+    position: absolute;
+    z-index: 1;
+    width: 24px;
+    height: 40px;
+    text-align: center;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.4);
+    border: #000000 none 1px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 20px;
+    padding: 0;
+    margin-top: -20px; }
+    #slideshow .slideshow-btn:focus {
+      outline: none; }
+    #slideshow .slideshow-btn:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: background-color 0.2s; }
+  #slideshow #slideshow-next {
+    right: 0; }
+  #slideshow #slideshow-prev {
+    left: 0; }
+  #slideshow #slideshow-indi {
+    z-index: 1;
+    margin-left: 0 !important;
+    left: 46px;
+    bottom: 20px;
+    position: absolute;
+    font-size: 0;
+    text-align: center; }
+    #slideshow #slideshow-indi .active {
+      border-radius: 50%;
+      border: 2px none rgba(255, 255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.2); }
+      #slideshow #slideshow-indi .active:after {
+        border: 2px none rgba(185, 190, 186, 0.4);
+        background-color: #ffffff; }
+    #slideshow #slideshow-indi .slideshow-indicator {
+      width: 18px;
+      height: 18px;
+      position: relative;
+      display: inline-block;
+      margin-right: 1px; }
+      #slideshow #slideshow-indi .slideshow-indicator:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        border: 2px solid rgba(185, 190, 186, 0.4); }
+  #slideshow a {
+    transition: all .4s; }
   #slideshow img {
     height: 470px;
     margin-top: 10px;
@@ -656,7 +715,21 @@ a {
     margin: 0; }
   #newyear-head li {
     display: inline;
-    margin: 0 12px 10px 0; }
+    margin: 0 12px 10px 0;
+    position: relative; }
+  #newyear-head a:after {
+    width: 226px;
+    height: 176px;
+    content: '';
+    background-color: #c81623;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.4s;
+    left: 0; }
+  #newyear-head a:hover:after {
+    opacity: 0.2;
+    transition: all 0.4s; }
   #newyear-head img {
     width: 226px;
     height: 176px; }
@@ -676,7 +749,21 @@ a {
     height: 140px;
     margin: 0 10px 8px 0;
     border-radius: 8px;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
+  #newyear-sub a:after {
+    width: 180px;
+    height: 140px;
+    content: '';
+    background-color: #c81623;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.4s;
+    left: 0; }
+  #newyear-sub a:hover:after {
+    opacity: 0.2;
+    transition: all 0.4s; }
   #newyear-sub img {
     width: 180px;
     height: 140px; }
