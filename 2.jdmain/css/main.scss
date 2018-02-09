@@ -873,6 +873,75 @@ a{
   height: 275px;
   overflow: hidden;
   background-color: #fff;
+  box-sizing: content-box;
+
+  .flashdeal-items{
+    width: 800px;
+    overflow: hidden;
+  }
+
+  .fd-items{
+    float: left;
+    position: relative;
+    display: inline;
+    width: 200px;
+    height: 275px;
+    text-align: center;
+    margin: auto;
+
+    img{
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      left: 50%;
+      margin-left: -70px;
+      top: 40px;
+    }
+
+    .item-name{
+      position: absolute;
+      top: 190px;
+      left: 0;
+      width: 160px;
+      padding: 0 15px;
+      line-height: 30px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .fd-item-price{
+      position: absolute;
+      left: 15px;
+      top: 230px;
+      width: 160px;
+      height: 20px;
+      padding: 1px;
+      background: #e6382f;
+      line-height: 20px;
+
+      .item-price-cur{
+        float: left;
+        width: 80px;
+        height: 20px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .item-price-org{
+        float: left;
+        width: 80px;
+        height: 20px;
+        background: #fff;
+        text-align: center;
+        color: #b7bcb8;
+        font-size: 12px;
+        text-decoration: line-through;
+      }
+    }
+  }
 }
 
 .flashdeal-rightslide{
@@ -882,6 +951,11 @@ a{
   height: 260px;
   padding: 8px 10px 7px;
   background-color: #fff;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 #newyear{
@@ -1063,6 +1137,297 @@ a{
     }
   }
 }
+
+.column-main{
+  overflow: hidden;
+  position: relative;
+}
+
+.ranking-nav{
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background: #f7f7f7;
+
+  .rnav-title{
+    float: left;
+    width: 78px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+}
+
+.ranking-content{
+  //float: left;
+  width: 350px;
+  height: 321px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  .ranking-item{
+    position: relative;
+    display: block;
+    height: 107px;
+
+    img{
+      float: left;
+      width: 80px;
+      height: 80px;
+      margin-top: 15px;
+    }
+
+    .item-rank{
+      float: left;
+      width: 30px;
+      height: 40px;
+      margin: 36px 0 0 10px;
+      line-height: 40px;
+      font-size: 32px;
+      text-align: center;
+      font-family: 'impact';
+    }
+
+    .item-rank1{
+      color: #e74240;
+    }
+    .item-rank2{
+      color: #ed713d;
+    }
+    .item-rank3{
+      color: #feb185;
+    }
+
+    .item-desc{
+      display: block;
+      margin-left: 125px;
+      padding-top: 40px;
+      height: 32px;
+      line-height: 16px;
+      font-size: 12px;
+      overflow: hidden;
+      color: #333;
+      transition: color ease .2s;
+    }
+  }
+}
+
+.buypromo{
+  position: relative;
+  display: block;
+  width: 350px;
+  overflow: hidden;
+  height: 355px;
+  margin: 0 auto;
+  &:hover{
+    .promo-detail-btn{
+      color: #fff;
+      background-color: #e33333;
+      border-color: #e33333 !important;
+    }
+  }
+
+  > img{
+    width: 350px;
+    height: 300px;
+  }
+
+  .promo-container{
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 210px;
+    padding-top: 52px;
+    z-index: 1;
+    color: #fff;
+    background: url(../img/buypromo/bg.png) repeat-x 0 bottom;
+
+  .promo-list{
+    width: 100%;
+    height: 90px;
+    text-align: center;
+
+    .promo-item{
+      display: inline-block;
+      width: 90px;
+      height: 90px;
+      margin: 0 12px;
+      border-radius: 50%;
+      background: #fff;
+      overflow: hidden;
+      line-height: 90px;
+      position: relative;
+
+      img{
+        width: 70px;
+        height: 70px;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .promo-title{
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    font-size: 18px;
+    margin-top: 19px;
+    text-align: center;
+    &:before, &:after{
+      content: '';
+      position: relative;
+      top: 0;
+      display: inline-block;
+      width: 47px;
+      height: 1px;
+      margin: 10px;
+      background: #fff;
+    }
+
+    span{
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 135px;
+    }
+  }
+    .promo-desc{
+      display: block;
+      font-size: 12px;
+      height: 14px;
+      line-height: 14px;
+      margin: 10px auto 0;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 235px;
+    }
+    .promo-detail-btn{
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      margin-left: -41px;
+      width: 80px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      border: solid 1px #fff;
+      border-radius: 10px;
+      transition: all ease .2s;
+    }
+  }
+}
+
+.coupon-container{
+  //float: left;
+  width: 350px;
+  height: 355px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  .coupon-item{
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #f6f6f6;
+    display: block;
+    height: 118px;
+
+    &:before, &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: 54px;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    &:before{
+      top: -8px;
+    }
+    &:after{
+      bottom: ;: -8px;
+    }
+
+    > img{
+      float: left;
+      margin: 14px 0 0 10px;
+      width: 70px;
+      height: 70px;
+      padding: 10px;
+      border-radius: 50%;
+      transition: opacity ease .2s;
+      background: #fff;
+    }
+
+    .coupon-detail{
+      padding-top: 15px;
+      margin: 0 72px 0 110px;
+
+      .coupon-price{
+        font-family: 'impact';
+        display: block;
+        height: 38px;
+        line-height: 38px;
+        color: #e33333;
+      }
+
+      .currency{
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .price{
+        font-size: 34px;
+      }
+
+      .coupon-limit{
+        display: block;
+        color: #b1b3b0;
+        font-size: 14px;
+        line-height: 24px;
+        height: 24px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .coupon-desc{
+        display: block;
+        color: #767b77;
+        font-size: 14px;
+        line-height: 24px;
+        height: 24px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+    .coupon-more{
+      float: right;
+      height: 100%;
+      line-height: 118px;
+      margin-right: 34px;
+      font-size: 12px;
+      color: #333;
+      span{
+        display: inline-block;
+        width: 1px;
+        line-height: 15px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
 
 #promo1{
   height: 480px;

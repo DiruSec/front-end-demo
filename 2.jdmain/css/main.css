@@ -671,7 +671,62 @@ a {
   border-right: solid 1px #f0f0f0;
   height: 275px;
   overflow: hidden;
-  background-color: #fff; }
+  background-color: #fff;
+  box-sizing: content-box; }
+  .flashdeal-wrapper .flashdeal-items {
+    width: 800px;
+    overflow: hidden; }
+  .flashdeal-wrapper .fd-items {
+    float: left;
+    position: relative;
+    display: inline;
+    width: 200px;
+    height: 275px;
+    text-align: center;
+    margin: auto; }
+    .flashdeal-wrapper .fd-items img {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      left: 50%;
+      margin-left: -70px;
+      top: 40px; }
+    .flashdeal-wrapper .fd-items .item-name {
+      position: absolute;
+      top: 190px;
+      left: 0;
+      width: 160px;
+      padding: 0 15px;
+      line-height: 30px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap; }
+    .flashdeal-wrapper .fd-items .fd-item-price {
+      position: absolute;
+      left: 15px;
+      top: 230px;
+      width: 160px;
+      height: 20px;
+      padding: 1px;
+      background: #e6382f;
+      line-height: 20px; }
+      .flashdeal-wrapper .fd-items .fd-item-price .item-price-cur {
+        float: left;
+        width: 80px;
+        height: 20px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold; }
+      .flashdeal-wrapper .fd-items .fd-item-price .item-price-org {
+        float: left;
+        width: 80px;
+        height: 20px;
+        background: #fff;
+        text-align: center;
+        color: #b7bcb8;
+        font-size: 12px;
+        text-decoration: line-through; }
 
 .flashdeal-rightslide {
   position: relative;
@@ -680,6 +735,9 @@ a {
   height: 260px;
   padding: 8px 10px 7px;
   background-color: #fff; }
+  .flashdeal-rightslide img {
+    width: 100%;
+    height: 100%; }
 
 #newyear {
   margin-bottom: 30px;
@@ -812,6 +870,232 @@ a {
           height: 20px;
           line-height: 20px;
           margin: 12px 0 0 10px; }
+
+.column-main {
+  overflow: hidden;
+  position: relative; }
+
+.ranking-nav {
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background: #f7f7f7; }
+  .ranking-nav .rnav-title {
+    float: left;
+    width: 78px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center; }
+
+.ranking-content {
+  width: 350px;
+  height: 321px;
+  overflow: hidden;
+  margin: 0 auto; }
+  .ranking-content .ranking-item {
+    position: relative;
+    display: block;
+    height: 107px; }
+    .ranking-content .ranking-item img {
+      float: left;
+      width: 80px;
+      height: 80px;
+      margin-top: 15px; }
+    .ranking-content .ranking-item .item-rank {
+      float: left;
+      width: 30px;
+      height: 40px;
+      margin: 36px 0 0 10px;
+      line-height: 40px;
+      font-size: 32px;
+      text-align: center;
+      font-family: 'impact'; }
+    .ranking-content .ranking-item .item-rank1 {
+      color: #e74240; }
+    .ranking-content .ranking-item .item-rank2 {
+      color: #ed713d; }
+    .ranking-content .ranking-item .item-rank3 {
+      color: #feb185; }
+    .ranking-content .ranking-item .item-desc {
+      display: block;
+      margin-left: 125px;
+      padding-top: 40px;
+      height: 32px;
+      line-height: 16px;
+      font-size: 12px;
+      overflow: hidden;
+      color: #333;
+      transition: color ease .2s; }
+
+.buypromo {
+  position: relative;
+  display: block;
+  width: 350px;
+  overflow: hidden;
+  height: 355px;
+  margin: 0 auto; }
+  .buypromo:hover .promo-detail-btn {
+    color: #fff;
+    background-color: #e33333;
+    border-color: #e33333 !important; }
+  .buypromo > img {
+    width: 350px;
+    height: 300px; }
+  .buypromo .promo-container {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 210px;
+    padding-top: 52px;
+    z-index: 1;
+    color: #fff;
+    background: url(../img/buypromo/bg.png) repeat-x 0 bottom; }
+    .buypromo .promo-container .promo-list {
+      width: 100%;
+      height: 90px;
+      text-align: center; }
+      .buypromo .promo-container .promo-list .promo-item {
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+        margin: 0 12px;
+        border-radius: 50%;
+        background: #fff;
+        overflow: hidden;
+        line-height: 90px;
+        position: relative; }
+        .buypromo .promo-container .promo-list .promo-item img {
+          width: 70px;
+          height: 70px;
+          margin: 10px 0; }
+    .buypromo .promo-container .promo-title {
+      display: block;
+      height: 24px;
+      line-height: 24px;
+      font-size: 18px;
+      margin-top: 19px;
+      text-align: center; }
+      .buypromo .promo-container .promo-title:before, .buypromo .promo-container .promo-title:after {
+        content: '';
+        position: relative;
+        top: 0;
+        display: inline-block;
+        width: 47px;
+        height: 1px;
+        margin: 10px;
+        background: #fff; }
+      .buypromo .promo-container .promo-title span {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 135px; }
+    .buypromo .promo-container .promo-desc {
+      display: block;
+      font-size: 12px;
+      height: 14px;
+      line-height: 14px;
+      margin: 10px auto 0;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 235px; }
+    .buypromo .promo-container .promo-detail-btn {
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      margin-left: -41px;
+      width: 80px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      border: solid 1px #fff;
+      border-radius: 10px;
+      transition: all ease .2s; }
+
+.coupon-container {
+  width: 350px;
+  height: 355px;
+  overflow: hidden;
+  margin: 0 auto; }
+  .coupon-container .coupon-item {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #f6f6f6;
+    display: block;
+    height: 118px; }
+    .coupon-container .coupon-item:before, .coupon-container .coupon-item:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: 54px;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background: #fff; }
+    .coupon-container .coupon-item:before {
+      top: -8px; }
+    .coupon-container .coupon-item:after {
+      bottom: -8px; }
+    .coupon-container .coupon-item > img {
+      float: left;
+      margin: 14px 0 0 10px;
+      width: 70px;
+      height: 70px;
+      padding: 10px;
+      border-radius: 50%;
+      transition: opacity ease .2s;
+      background: #fff; }
+    .coupon-container .coupon-item .coupon-detail {
+      padding-top: 15px;
+      margin: 0 72px 0 110px; }
+      .coupon-container .coupon-item .coupon-detail .coupon-price {
+        font-family: 'impact';
+        display: block;
+        height: 38px;
+        line-height: 38px;
+        color: #e33333; }
+      .coupon-container .coupon-item .coupon-detail .currency {
+        font-size: 16px;
+        font-weight: 400; }
+      .coupon-container .coupon-item .coupon-detail .price {
+        font-size: 34px; }
+      .coupon-container .coupon-item .coupon-detail .coupon-limit {
+        display: block;
+        color: #b1b3b0;
+        font-size: 14px;
+        line-height: 24px;
+        height: 24px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+      .coupon-container .coupon-item .coupon-detail .coupon-desc {
+        display: block;
+        color: #767b77;
+        font-size: 14px;
+        line-height: 24px;
+        height: 24px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+    .coupon-container .coupon-item .coupon-more {
+      float: right;
+      height: 100%;
+      line-height: 118px;
+      margin-right: 34px;
+      font-size: 12px;
+      color: #333; }
+      .coupon-container .coupon-item .coupon-more span {
+        display: inline-block;
+        width: 1px;
+        line-height: 15px;
+        vertical-align: middle; }
 
 #promo1 {
   height: 480px;
