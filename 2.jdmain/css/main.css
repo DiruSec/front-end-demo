@@ -1097,6 +1097,77 @@ a {
         line-height: 15px;
         vertical-align: middle; }
 
+.findme-container {
+  width: 350px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  text-align: center; }
+  .findme-container img {
+    height: 250px;
+    width: 100%;
+    overflow: hidden; }
+  .findme-container .findme-title {
+    font-size: 18px;
+    color: #333;
+    height: 50px;
+    line-height: 56px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0; }
+  .findme-container .findme-desc {
+    font-size: 14px;
+    color: #999;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    margin: 0; }
+
+.findpro-container {
+  margin: 0 auto;
+  border-top: 1px solid #ebeaea;
+  width: 350px; }
+  .findpro-container a {
+    width: 105px;
+    height: 125px;
+    margin: 0 0 0 5px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    box-sizing: content-box; }
+    .findpro-container a img {
+      width: 70px;
+      height: 70px;
+      margin: 8px auto; }
+    .findpro-container a p {
+      font-size: 14px;
+      color: #333;
+      height: 34px;
+      line-height: 34px;
+      padding: 0 4px;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+
+.maylike-main {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  margin: 0 auto;
+  display: block; }
+
+.maylike-sub {
+  width: 360px;
+  overflow: hidden;
+  margin: 10px auto 0; }
+  .maylike-sub img {
+    float: left;
+    width: 110px;
+    height: 110px;
+    margin: 0 5px; }
+
 #promo1 {
   height: 480px;
   margin: 0 auto; }
