@@ -7,9 +7,75 @@
     <script src="js/main.js"></script>
 </head>
 <body>
+<div class="screen-tools">
+    <div id="search-bar">
+        <div class="search-bar-container">
+        <div class="search-logo">
+            <a class="search-logo-link" href="#"></a>
+        </div>
+        <div class="search-input">
+            <form>
+                <input placeholder="云南白药牙膏" />
+                <a class="search-by-image">
+                </a>
+                <button class="search-btn" type="submit">
+                    <span class="iconfont icon-search"></span>
+                </button>
+            </form>
+        </div>
+        </div>
+    </div>
+    <div id="right-menu">
+        <div class="right-menu-bar"></div>
+        <div class="menu-bar">
+            <div class="menu-bar-btn right-menu-my">
+                <span class="right-menu-ico"></span>
+                <span class="right-menu-text">京东会员</span>
+            </div>
+            <div class="menu-bar-btn right-menu-cart">
+                <span class="right-menu-ico"></span>
+                <span class="right-menu-text">购物车</span>
+            </div>
+            <div class="menu-bar-btn right-menu-favorite">
+                <span class="right-menu-ico"></span>
+                <span class="right-menu-text">我的关注</span>
+            </div>
+            <div class="menu-bar-btn right-menu-history">
+                <span class="right-menu-ico"></span>
+                <span class="right-menu-text">我的足迹</span>
+            </div>
+            <div class="menu-bar-btn right-menu-message">
+                <span class="right-menu-ico"></span>
+                <span class="right-menu-text">我的消息</span>
+            </div>
+            <div class="menu-bar-btn right-menu-support">
+                <span class="right-menu-ico"></span>
+                <span class="right-menu-text">咨询IMI</span>
+            </div>
+            <div class="menu-bar-btn right-menu-feed">
+                <span class="right-menu-ico"></span>
+                <span class="right-menu-text">反馈</span>
+            </div>
+        </div>
+        <div class="menu-bottom">
+            <div class="menu-bar-btn right-menu-top">
+                <span class="right-menu-ico"></span>
+                <span class="right-menu-text">顶部</span>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="container">
+    <div id="banner-container">
+    <div class="header-banner">
+    <div class="bannerimg-small"></div>
+        <div class="bannerimg-big"></div>
+        <a href="#banner-container" id="banner-close"></a>
+    </div>
+    </div>
     <header>
-        <nav class="nav-top">
+        <nav class="nav-container">
+        <nav class="nav-top basic-column">
             <ul class="nav-location">
                 <li>
                     <div class="dropdown-container">
@@ -216,21 +282,51 @@
                     </div>
                 </li>
                 <li class="nav-separator"></li>
-                <li>
-                    <a>手机京东</a>
+                <li class="nav-mobilejd">
+                    <span>手机京东</span>
+                    <div class="nav-qrcode"></div>
+                    <div class="mobile-popup">
+                        <div class="popup-section">
+                            <img src="img/qrcode-big.png" />
+                            <div class="popup-desc">
+                                <p>手机京东</p>
+                                <span>新人专享大礼包</span>
+                                <a class="popup-down popup-ios" href="#"></a>
+                                <a class="popup-down popup-and" href="#"></a>
+                                <a class="popup-down popup-pad" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="popup-section">
+                            <img src="img/qrcode-wechat.jpg" />
+                            <div class="popup-desc">
+                                <p>关注京东微信</p>
+                                <span>微信扫一扫关注<br/>新粉最高180元<br/>惊喜礼包</span>
+                                </div>
+                        </div>
+                        <div class="popup-section">
+                            <img src="img/qrcode-finac.jpg" />
+                            <div class="popup-desc">
+                                <p>京东金融客户端</p>
+                                <span>新人专享大礼包</span>
+                                <a class="popup-down popup-ios" href="#"></a>
+                                <a class="popup-down popup-and" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
+        </nav>
         </nav>
         <section class="search">
             <div class="logo">
                 <a href="https://jd.com/"><img src="img/logo.gif" /></a>
             </div>
-            <div id="search-input">
+            <div class="search-input">
             <form>
                 <input placeholder="云南白药牙膏" type="text" autocomplete="off" accesskey="s" />
-                <a id="search-by-image">
+                <a class="search-by-image">
                 </a>
-                <button id="search" type="submit">
+                <button class="search-btn" type="submit">
                     <span class="iconfont icon-search"></span>
                 </button>
             </form>
@@ -282,7 +378,7 @@
             </div>
         </section>
     </header>
-    <section id="main-navi">
+    <section id="main-navi" class="basic-column">
         <section id="category-navigation">
             <ul>
                 <li><a href="#">家用电器</a>
@@ -717,7 +813,7 @@
         </section>
     </section>
 
-    <section id="flashdeal">
+    <section id="flashdeal" class="basic-column">
         <div id="flashdeal-title">
             <p class="fd-title">京东秒杀</p>
             <p class="fd-etitle">FLASH DEALS</p>
@@ -726,17 +822,23 @@
             <div id="flashdeal-counter">
                 <span class="counter-divide"></span>
                 <div class="counter">
-                <span class="counter-number">01</span>
+                <span id="counter-hour" class="counter-number">00</span>
                 </div>
                 <div class="counter">
-                    <span class="counter-number">01</span>
+                    <span id="counter-min" class="counter-number">00</span>
                 </div>
                 <div class="counter">
-                    <span class="counter-number">01</span>
+                    <span id="counter-sec" class="counter-number">00</span>
                 </div>
             </div>
         </div>
         <div class="flashdeal-wrapper">
+            <a class="flashdeal-btn" id="flashdeal-leftbtn">
+                <span></span>
+            </a>
+            <a class="flashdeal-btn" id="flashdeal-rightbtn">
+                <span></span>
+            </a>
         <div class="flashdeal-items">
             <a href="#" class="fd-items">
                 <img src="img/flashdeal/fd-1.webp" />
@@ -795,26 +897,75 @@
                 </div>
             </a>
             <a href="#" class="fd-items">
-                <img src="img/flashdeal/fd-1.webp" />
-                <span class="item-name">Apple Watch Series 3智能手表（GPS+蜂窝网络款 42毫米 深空灰色铝金属表壳 黑色运动型表带 MQQT2CH/A）</span>
+                <img src="img/flashdeal/fd-2.webp" />
+                <span class="item-name">光明 纯牛奶250ml*24盒/箱</span>
                 <div class="fd-item-price">
                     <div class="item-price-cur">
                         <span>¥</span>
-                        <span>3286.00</span>
+                        <span>52.90</span>
                     </div>
                     <div class="item-price-org">
                         <span>¥</span>
-                        <span>3488.00</span>
+                        <span>66.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="fd-items">
+                <img src="img/flashdeal/fd-2.webp" />
+                <span class="item-name">光明 纯牛奶250ml*24盒/箱</span>
+                <div class="fd-item-price">
+                    <div class="item-price-cur">
+                        <span>¥</span>
+                        <span>52.90</span>
+                    </div>
+                    <div class="item-price-org">
+                        <span>¥</span>
+                        <span>66.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="fd-items">
+                <img src="img/flashdeal/fd-2.webp" />
+                <span class="item-name">光明 纯牛奶250ml*24盒/箱</span>
+                <div class="fd-item-price">
+                    <div class="item-price-cur">
+                        <span>¥</span>
+                        <span>52.90</span>
+                    </div>
+                    <div class="item-price-org">
+                        <span>¥</span>
+                        <span>66.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="fd-items">
+                <img src="img/flashdeal/fd-2.webp" />
+                <span class="item-name">光明 纯牛奶250ml*24盒/箱</span>
+                <div class="fd-item-price">
+                    <div class="item-price-cur">
+                        <span>¥</span>
+                        <span>52.90</span>
+                    </div>
+                    <div class="item-price-org">
+                        <span>¥</span>
+                        <span>66.00</span>
                     </div>
                 </div>
             </a>
         </div>
         </div>
         <div class="flashdeal-rightslide">
+            <div>
+                <span id="rightslide">
             <img src="img/flashdeal/fds-1.jpg" />
+            <img src="img/flashdeal/fds-2.jpg" />
+            <img src="img/flashdeal/fds-1.jpg" />
+                    </span>
+            </div>
         </div>
     </section>
 
+    <div class="basic-column">
     <section id="newyear">
         <div class="ny-bg"></div>
         <section id="newyear-wrapper">
@@ -847,7 +998,9 @@
                 </div>
         </section>
     </section>
-    <section id="floor">
+    </div>
+    <div class="basic-column">
+    <section id="floor" class="basic-column">
         <section id="promo1">
             <section class="column">
                 <div class="column-title-wrapper">
@@ -1103,7 +1256,133 @@
             </section>
         </section>
     </section>
-    <footer>
+    </div>
+
+    <div class="basic-column">
+        <div class="floor-title">
+            <p>智能先锋</p>
+        </div>
+        <div class="floor1">
+        <section class="column">
+            <div class="column-title-wrapper">
+                <a href="#">
+                    <span class="column-title">手机频道</span>
+                    <span class="icon-goto"></span>
+                    <span class="column-subtitle">一个极客的诞生</span>
+                </a>
+            </div>
+            <div class="column-main column-container">
+                <img class="sq-button" src="img/floor/1-1.jpg" />
+                <img class="sq-button" src="img/floor/1-2.jpg" />
+                <div class="logo-wrapper">
+                    <img class="sq-logo" src="img/floor/1-l1.jpg" />
+                    <img class="sq-logo" src="img/floor/1-l2.jpg" />
+                    <img class="sq-logo" src="img/floor/1-l1.jpg" />
+                    <img class="sq-logo" src="img/floor/1-l2.jpg" />
+                    <img class="sq-logo" src="img/floor/1-l1.jpg" />
+                    <img class="sq-logo" src="img/floor/1-l2.jpg" />
+                    <img class="sq-logo" src="img/floor/1-l1.jpg" />
+                    <img class="sq-logo" src="img/floor/1-l2.jpg" />
+                    <img class="sq-logo" src="img/floor/1-l1.jpg" />
+                    <img class="sq-logo" src="img/floor/1-l2.jpg" />
+                    <img class="sq-logo" src="img/floor/1-l1.jpg" />
+                    <img class="sq-logo" src="img/floor/1-l2.jpg" />
+                </div>
+            </div>
+        </section>
+        <section class="column">
+            <div class="column-title-wrapper">
+                <a href="#">
+                    <span class="column-title">新品首发</span>
+                    <span class="icon-goto"></span>
+                    <span class="column-subtitle">新春来袭 看新奇好物</span>
+                </a>
+            </div>
+            <div class="column-main">
+                <div class="column-container">
+                    <a href="#">
+                        <img src="img/floor/2.jpg" />
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="column-transborder column">
+            <div class="column-border">
+                <a href="#">
+                    <img src="img/floor/3.jpg">
+                </a>
+            </div>
+        </section>
+        </div>
+        <div class="floor2">
+            <section class="column-transborder column-transborder-reverse column">
+                <div class="column-border">
+                    <a href="#">
+                        <img src="img/floor/3.jpg">
+                    </a>
+                </div>
+            </section>
+            <section class="column column-transparent">
+                <div class="container-quaditem">
+                    <div class="img-quad-container">
+                    <img src="img/floor/1.webp">
+                    </div>
+                    <div class="img-quad-info">
+                        <p class="quad-product-name">三星（SAMSUNG） 三星G9298 三星领世旗舰8 大器5 双屏翻盖 智能手机 黑色 移动联通双4G(4G+64G)</p>
+                        <p class="quad-product-price"><span>¥</span>9015.00</p>
+                    </div>
+                </div>
+                <div class="container-quaditem">
+                    <div class="img-quad-container">
+                    <img src="img/floor/2.webp">
+                    </div>
+                    <div class="img-quad-info">
+                        <p class="quad-product-name">小鸟看看 Pico 终结者单头盔VR智能 VR眼镜 3D头盔</p>
+                        <p class="quad-product-price"><span>¥</span>499.00</p>
+                    </div>
+                </div>
+                <div class="container-quaditem">
+                    <div class="img-quad-container">
+                    <img src="img/floor/3.webp">
+                    </div>
+                    <div class="img-quad-info">
+                        <p class="quad-product-name">户外对讲机大功率车载泉盛UV-R50民用50公里5W自驾游迷你对讲机 R50迷彩蓝</p>
+                        <p class="quad-product-price"><span>¥</span>138.00</p>
+                    </div>
+
+                </div>
+                <div class="container-quaditem">
+                    <div class="img-quad-container">
+                    <img src="img/floor/4.webp">
+                    </div>
+                    <div class="img-quad-info">
+                        <p class="quad-product-name">宏碁(Acer)蜂鸟Swift3微边框轻薄本 14英寸全金属笔记本电脑SF314(i5-8250U 8G 128G SSD+1T IPS 指纹)烈焰红</p>
+                        <p class="quad-product-price"><span>¥</span>4849.00</p>
+                    </div>
+                </div>
+            </section>
+            <section class="column">
+                <div class="column-title-wrapper">
+                    <a href="#">
+                        <span class="column-title">电脑办公</span>
+                        <span class="icon-goto"></span>
+                        <span class="column-subtitle">智能潮货 嗨购不停</span>
+                    </a>
+                </div>
+                <div class="column-main">
+                    <div class="column-container container-doublepic">
+                        <a href="#">
+                            <img src="img/floor/4.jpg" />
+                            <img src="img/floor/5.jpg" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="addheight"></div>
+    </div>
+
+    <footer class="basic-column">
         <div id="footer-desc">
             <div class="desc-column">
                 <div class="desc-wrapper">
