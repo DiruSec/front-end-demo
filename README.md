@@ -7,5 +7,7 @@ Some demo while learning front-end development.
 ├── 2.jdmain      Replica of JD.com
 └── js			      jQuery Library.
 ```
-[Slideshow](https://dirusec.com/fe/slideshow)
+
+## Preview
+[Slideshow](https://dirusec.com/fe/slideshow)  
 [JD](https://dirusec.com/fe/jd)
